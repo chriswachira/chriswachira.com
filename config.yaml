@@ -107,7 +107,7 @@ params:
     # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
     # showBrandLogo: false # Show brand logo in nav bar | default is true
     brandName: "chriswachira" # Brand name for the brand | default is the title variable
-    disableSearch: false
+    disableSearch: true
     # searchPlaceholder: "Search"
     stickyNavBar:
       enable : true
