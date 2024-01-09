@@ -27,10 +27,13 @@ jobs:
     - name: Apply env variables to Hugo config file
       env:
         SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
-      run: envsubst < config.yaml > config.yaml
+      run: envsubst < config.yaml > new-config.yaml
+
+    - name: Remove any previously generated public/ directory
+      run: rm -rf public/
 
     - name: Generate public directory
-      run: hugo
+      run: hugo --config new-config.yaml
     
     - name: Push public directory contents to S3 bucket
       env:
