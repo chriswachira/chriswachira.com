@@ -1,0 +1,33 @@
+name: Deploy website changes to production S3 bucket
+run-name: ${{ github.actor }} triggered a Hugo site deployment
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  publish-site:
+    name: "Publish site to S3 bucket"
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install Hugo
+      run: |
+        sudo apt install wget
+        wget https://github.com/gohugoio/hugo/releases/download/v0.120.1/hugo_0.120.1_linux-amd64.deb
+        sudo dpkg -i hugo_0.120.1_linux-amd64.deb
+    
+    - name: Install AWS CLI
+      run: sudo snap install aws-cli --classic
+
+    - name: Generate public directory
+      run: hugo
+    
+    - name: Push public directory contents to S3 bucket
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+      run: aws s3 cp --recursive public/ s3://chriswachira-com
