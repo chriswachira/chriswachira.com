@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - "main"
+  pull_request:
+
 
 jobs:
   publish-site:
@@ -13,14 +15,19 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Install Hugo
+    - name: Install Hugo & other CI dependencies
       run: |
-        sudo apt install wget
+        sudo apt install wget gettext-base
         wget https://github.com/gohugoio/hugo/releases/download/v0.120.1/hugo_0.120.1_linux-amd64.deb
         sudo dpkg -i hugo_0.120.1_linux-amd64.deb
     
     - name: Install AWS CLI
       run: sudo snap install aws-cli --classic
+
+    - name: Apply env variables to Hugo config file
+      env:
+        SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+      run: envsubst < config.yaml > config.yaml
 
     - name: Generate public directory
       run: hugo
