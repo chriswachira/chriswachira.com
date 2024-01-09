@@ -13,7 +13,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Install Hugo
+    - name: Install Hugo & other CI dependencies
       run: |
         sudo apt install wget
         wget https://github.com/gohugoio/hugo/releases/download/v0.120.1/hugo_0.120.1_linux-amd64.deb
@@ -23,8 +23,10 @@ jobs:
       run: sudo snap install aws-cli --classic
 
     - name: Generate public directory
-      run: hugo
-    
+      run: |
+        hugo --baseURL ${{ vars.SITE_BASE_URL }} --logLevel debug
+        du -sh public/
+
     - name: Push public directory contents to S3 bucket
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
