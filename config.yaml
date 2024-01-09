@@ -123,10 +123,10 @@ params:
   # Hero
   hero:
     enable: true
-    intro: "Hi, my name is"
-    title: "Chris"
-    subtitle: "I build awesome things for the world wide web..."
-    content: "A passionate DevOps/Cloud engineer. I tend to make use of modern cloud technologies to run web applications at scale, fast and secure. All for the users' best experiences."
+    intro: "Hi there! I am"
+    title: "@chriswachira"
+    subtitle: "I build awesome infrastructure for the world wide web..."
+    content: "A passionate DevOps & Cloud Infrastructure engineer. I make use of modern cloud technologies to run web applications at scale, fast and secure. All for the users' best experiences."
     image: /images/hero.jpeg
     bottomImage:
       enable: true
