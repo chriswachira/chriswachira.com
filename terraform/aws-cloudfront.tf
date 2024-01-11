@@ -35,8 +35,6 @@ resource "aws_cloudfront_distribution" "chriswachira_cf_distribution" {
   default_root_object = "index.html"
   http_version        = "http2and3"
 
-  aliases = ["www.chriswachira.com", "chriswachira.com"]
-
   default_cache_behavior {
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
     cached_methods         = ["GET", "HEAD"]
