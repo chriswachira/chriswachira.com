@@ -1,7 +1,7 @@
 resource "aws_acm_certificate" "chriswachira_com_certificate" {
   domain_name       = "chriswachira.com"
   validation_method = "DNS"
-  key_algorithm     = "RSA_4096"
+  key_algorithm     = "RSA_2048"
 
   tags = {
     Environment = "Production"
