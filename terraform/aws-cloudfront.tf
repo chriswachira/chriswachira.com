@@ -24,9 +24,8 @@ resource "aws_cloudfront_distribution" "chriswachira_cf_distribution" {
   }
 
   viewer_certificate {
-    acm_certificate_arn            = aws_acm_certificate.chriswachira_com_certificate.arn
-    cloudfront_default_certificate = false
-    minimum_protocol_version       = "TLSv1.2_2021"
+    cloudfront_default_certificate = true
+    minimum_protocol_version       = "TLSv1"
     ssl_support_method             = "sni-only"
   }
 
