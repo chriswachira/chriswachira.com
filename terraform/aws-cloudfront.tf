@@ -1,5 +1,6 @@
 resource "aws_cloudfront_origin_access_identity" "chriswachira_cf_dist_origin_identity" {
-  comment = "Access identity for the CloudFront distribution for chriswachira.com"
+  comment  = "Access identity for the CloudFront distribution for chriswachira.com"
+  provider = aws.us_east_1
 }
 
 locals {
@@ -7,6 +8,8 @@ locals {
 }
 
 resource "aws_cloudfront_distribution" "chriswachira_cf_distribution" {
+  provider = aws.us_east_1
+
   origin {
     domain_name = aws_s3_bucket.chriswachira-site-bucket.bucket_regional_domain_name
     origin_id   = local.cw_com_s3_origin_id
