@@ -43,7 +43,21 @@ resource "aws_cloudfront_distribution" "chriswachira_cf_distribution" {
     cached_methods         = ["GET", "HEAD"]
     compress               = true
     default_ttl            = 86400
+    min_ttl                = 0
+    max_ttl                = 31536000
     target_origin_id       = local.cw_com_s3_origin_id
     viewer_protocol_policy = "redirect-to-https"
+
+    forwarded_values {
+      cookies {
+        forward = "none"
+      }
+      query_string = false
+    }
   }
+
+  tags = {
+    Environment = "Production"
+  }
+
 }
