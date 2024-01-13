@@ -27,9 +27,9 @@ resource "aws_cloudfront_distribution" "chriswachira_cf_distribution" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
-    minimum_protocol_version       = "TLSv1"
-    ssl_support_method             = "sni-only"
+    acm_certificate_arn      = aws_acm_certificate.chriswachira_com_certificate.arn
+    minimum_protocol_version = "TLSv1.2_2021"
+    ssl_support_method       = "sni-only"
   }
 
   enabled             = true
@@ -37,6 +37,7 @@ resource "aws_cloudfront_distribution" "chriswachira_cf_distribution" {
   comment             = "CloudFront distribution for the chriswachira.com website"
   default_root_object = "index.html"
   http_version        = "http2and3"
+  aliases             = ["www.chriswachira.com", "chriswachira.com"]
 
   default_cache_behavior {
     allowed_methods        = ["GET", "HEAD", "OPTIONS"]
