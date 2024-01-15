@@ -167,68 +167,78 @@ params:
 
   # Experience
   experience:
-    enable: false
+    enable: true
     # title: "Custom Name"
     items:
-      - job: "Senior Software Developer"
-        company: "Facebook"
-        companyUrl: "https://example.com"
-        date: "Jan 2022 - present"
+      - job: "Lead DevOps and Infrastructure Engineer"
+        company: "Savannah Informatics Limited"
+        companyUrl: "https://savannahinformatics.com"
+        date: "Nov 2020 - Dec 2023"
         featuredLink:
-          enable: true
+          enable: false
           name: "View the project"
           url: "https://example.com"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
-
-      - job: "Software Developer"
-        company: "Amazon"
-        companyUrl: "https://example.com"
-        date: "Sep 2020 - Dec 2021"
-        featuredLink:
+        info:
           enable: true
+          content: I worked as a DevOps Engineer for more than 3 years at Savannah Informatics.
+        content: |
+          - Lead a small team of DevOps and infrastructure engineers; introduced site reliability engineering as a culture and standard.
+          - Planned and provisioned optimised infrastructure on Google Cloud and AWS - VMs, buckets, DNS, managed databases, GKE clusters.
+          - Architected a partner cloud-based EMR (based on OpenMRS) on Hetzner baremetal servers and automated creation of customer VMs using Virsh, Qemu with Bash and Ansible.
+          - Centralized sprawled Helm charts across dozens of GitLab repos into standardized charts stored in GitLab's Helm registry.
+          - Implemented company-wide standards for application deployment and lifecycles.
+          - Spearheaded an incremental upgrade of legacy systems from VMs to container-based workloads to both GKE and EKS.
+          - Conducted trainings for developers on new technologies and changes across several fields e.g. Kubernetes basics, DevSecOps etc.
+          - Oversaw information security practices for both developers (OWASP, CVE scanning etc) and non-technical teams by training them on cybersecurity - avoiding suspicious websites, verifying email senders, social engineering etc. 
+          - Reduced overall expenditure of cloud costs and SaaS subscriptions by USD 4,500 monthly.
+          - Migrated access to our fleet of OpenSSH servers to using Teleport SSH for better secured developer access to servers, PostgreSQL databases and Kubernetes clusters.
+          - Rolled out encryption of production database backups stored on Amazon S3 using GPG keys. 
+          - Architected and implemented an autoscaling fleet of GitLab runners on GKE using Spot VMs; reduced CI runner wait times to nearly zero, increased developer productivity by 60%.
+
+      - job: "Lead I.T. Systems Technician"
+        company: "Net Pro Systems Kenya"
+        companyUrl: ""
+        date: "Nov 2017 - Oct 2020"
+        featuredLink:
+          enable: false
           url: "https://example.com"
         info:
           enable: true
           content: I worked as a software developer for more than one year in Amazon.
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          - Setup internet for homes and business with a focus on reliability and customer satisfaction.
+          - Developed custom PHP modules for Prestashop e-commerce website.
+          - Lead digital marketing for internet and product sales by properly setting up SEO and social media marketing campaigns.
+          - Setup applications and tools that helped management of growing customer base including accounting and networking applications on Linux servers e.g. Odoo ERP, Ubiquiti Network Management System (UNMS) with proper TLS security from Let's Encrypt with Cloudflare DDNS aiding in updating DNS records on public IP changes.
+          - Moved company's ecommerce website from a poor web hosting provider to self hosting on an on-premise Linux server (a humble Lenovo Core 2 Duo desktop), increasing performance by at least 300% and resulting in website appearing on top 3 Google search results (We all know Google loves fast websites).
+          - Researched and implemented a switch from static IP to PPPoE authentication for customer routers which allowed for easier management and scaling.
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "Junior Software Developer"
-        company: "Apple"
-        companyUrl: "https://example.com"
-        date: "Jan 2020 - Aug 2020"
+      - job: "Software Trainee"
+        company: "Andela"
+        companyUrl: "https://andela.com/"
+        date: "June 2017 - Sep 2017"
         info:
           enable: false
         featuredLink:
-          enable: true
+          enable: false
           url: "https://example.com"
         content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+          - Underwent software engineering and project management training.
+          - Learnt contributing to software using version control systems - Git and GitHub.
+          - Developed full stack applications using MVC frameworks e.g. Django, Ruby on Rails and frontend applications with HTML5/CSS3 and vanilla Javascript.
+          - Collaborated with team members on issues and ideas of improving our applications.
+          - Learnt conducting code reviews with our trainers using various tools and methodologies.
 
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "UI/UX Designer"
-        company: "Netflix"
-        companyUrl: "https://example.com"
-        date: "June 2017 - Nov 2019"
+      - job: "IT Technician"
+        company: "Gigabyte Systems Limited"
+        companyUrl: ""
+        date: "June 2015 - May 2017"
+        info:
+          enable: false
         featuredLink:
-          enable: true
+          enable: false
           url: "https://example.com"
-        content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
-
-      - job: "Product Designer"
-        company: "Google"
-        companyUrl: "https://example.com"
-        date: "Feb 2016 - Mar 2017"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
+        content: Responsible for computer repair/maintenance, setting up of computer networks, operating systems' installations (Windows & Linux), Mail setup and troubleshooting etc.
 
   # Education
   education:
