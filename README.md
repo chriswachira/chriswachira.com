@@ -16,6 +16,8 @@ The website is deployed to a public Amazon S3 bucket that is the origin of a Clo
 
 * **Terraform** - This Github repo has been integrated with Terraform Cloud to manage the state for the AWS infrastructure this website runs on. On creating a pull request, the Terraform code is checked for formatting and validated using a GitHub Actions workflow and a Terraform plan is triggered on Terraform Cloud.
 
+![Sample Terraform runs on Terraform Cloud](/assets/terraform-cloud-runs.png)
+
 * **AWS** - The website files are stored on an S3 bucket which serves as the origin of a CloudFront distribution. The *chriswachira.com* domain's DNS is managed using Route53, where an alias A record is mapped to the CloudFront's distribution domain name.
 
 ![Website's infrastructure on AWS](/assets/infrastructure.png)

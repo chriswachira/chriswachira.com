@@ -36,6 +36,6 @@ jobs:
 
     - name: Invalidate CloudFront distribution cache
       run: >-
-        aws cloufront create-invalidation
+        aws cloudfront create-invalidation
         --distribution ${{ vars.SITE_CLOUDFRONT_DISTRIBUTION_ID }}
         --paths "/*"
