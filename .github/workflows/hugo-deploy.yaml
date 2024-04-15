@@ -16,8 +16,8 @@ jobs:
     - name: Install Hugo & other CI dependencies
       run: |
         sudo apt install wget
-        wget https://github.com/gohugoio/hugo/releases/download/v0.120.1/hugo_0.120.1_linux-amd64.deb
-        sudo dpkg -i hugo_0.120.1_linux-amd64.deb
+        wget https://github.com/gohugoio/hugo/releases/download/v0.120.1/hugo_extended_0.120.1_linux-amd64.deb
+        sudo dpkg -i hugo_extended_0.120.1_linux-amd64.deb
     
     - name: Install AWS CLI
       run: sudo snap install aws-cli --classic
