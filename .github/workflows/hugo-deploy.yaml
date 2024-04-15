@@ -1,4 +1,4 @@
-name: Deploy website changes to production S3 bucket
+name: Deploy website changes to production
 run-name: ${{ github.actor }} triggered a Hugo site deployment
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   publish-site:
-    name: "Publish site to S3 bucket"
+    name: "Publish site to production"
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout
@@ -35,6 +35,10 @@ jobs:
       run: aws s3 cp --recursive public/ s3://chriswachira-com
 
     - name: Invalidate CloudFront distribution cache
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
       run: >-
         aws cloudfront create-invalidation
         --distribution ${{ vars.SITE_CLOUDFRONT_DISTRIBUTION_ID }}
