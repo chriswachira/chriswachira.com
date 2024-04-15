@@ -129,7 +129,7 @@ params:
     content: "A passionate DevOps & Cloud Infrastructure engineer. I make use of modern cloud technologies to run web applications at scale, fast and secure. All for the users' best experiences."
     image: /images/hero.jpeg
     bottomImage:
-      enable: true
+      enable: false
     # roundImage: true # Make hero image circular | default false
     button:
       enable: true
@@ -143,6 +143,18 @@ params:
           url: https://github.com/chriswachira
         - icon: fab fa-linkedin
           url: https://www.linkedin.com/in/chris-wachira
+
+  # Tech stack
+  stack:
+    enable: true
+    title: "This site's tech stack"
+    items:
+    - name: gohugo
+      image: "/images/stacks/gohugo.png"
+    - name: Amazon Web Services (AWS)
+      image: "/images/stacks/aws-white.png"
+    - name: HashiCorp Terraform
+      image: "/images/stacks/terraform-white.png"
 
   # About
   about:

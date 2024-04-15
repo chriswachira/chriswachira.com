@@ -1,0 +1,23 @@
+{{ if .Site.Params.stack.enable | default false }}
+<section id="tech-stack" class="py-0 py-sm-5">
+    <div class="container bg-transparent">
+        <h3 class="text-center bg-transparent">{{ .Site.Params.stack.title }}</h3>
+        <div class="bg-transparent row justify-content-center px-3 py-5">
+
+            {{ range .Site.Params.stack.items }}
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-9 pt-5 image {{ if .Site.Params.animate }}animate{{ end }} px-5 px-md-5 px-lg-0 text-center">
+                        <img src="{{ .image }}"
+                            class="img-thumbnail mx-auto{{ if .Site.Params.hero.roundImage }} rounded-circle{{ end }}"
+                            alt=""
+                        >
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+
+        </div>
+    </div>
+</section>
+{{ end }}
