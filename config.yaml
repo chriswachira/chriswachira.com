@@ -27,7 +27,7 @@ Menus:
     - identifier: blog
       name: Blog
       title: Blog posts
-      url: /#
+      url: /blogs
       weight: 1
     - identifier: gallery
       name: Gallery
@@ -125,8 +125,8 @@ params:
     enable: true
     intro: "Hi there! I am"
     title: "@chriswachira"
-    subtitle: "I build awesome infrastructure for the world wide web..."
-    content: "A passionate DevOps & Cloud Infrastructure engineer. I make use of modern cloud technologies to run web applications at scale, fast and secure. All for the users' best experiences."
+    subtitle: "Builder of scalable, reliable and highly-available secure cloud infrastructure..."
+    content: "I am a passionate Platform, DevOps & Cloud Infrastructure engineer making use of modern cloud technologies to run web applications at scale, fast and secure. All for the users' best experiences."
     image: /images/hero.jpeg
     bottomImage:
       enable: false
@@ -160,11 +160,11 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/20230416_141109.jpg"
+    image: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTRka2RwbHVlbm43OTlicWZjd3k0MmpocDFpeXZmaTFzeXNldnFkMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/o0vwzuFwCGAFO/giphy.webp"
     content: |-
       I am a software developer with a strong passion for cloud computing and web security. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art, mostly films and video games :).
       
-      I am currently working as the Lead DevOps and Platform Engineer at [Savannah Informatics](https://savannahinformatics.com) in Nairobi, Kenya. 
+      I am currently a Cloud Support Engineer (Containers) at Amazon Web Services in Nairobi, Kenya. 
 
     skills:
       enable: true
@@ -380,7 +380,7 @@ params:
       path: "blogs"
       count: 3
       title: Recent Posts
-      enable: false
+      enable: true
       disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/chriswachira
