@@ -13,6 +13,11 @@
 
 {{ define "main" }}
 {{- partial "sections/hero/index.html" . -}}
+<footer>
+{{- partial "sections/footer/recentBlogPosts.html" . -}}
+</footer>
+<!-- <hr width="50%",size="4",color="white",style="display:block;margin-left:auto;margin-right:auto;"> -->
+<hr width="70%", style="margin-left: auto; margin-right: auto; margin-top: 4em;">
 {{- partial "sections/tech-stack.html" . -}}
 {{- partial "sections/about.html" . -}}
 {{- partial "sections/experience.html" . -}}
